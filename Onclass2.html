@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+    }
+    label, input {
+        display: block;
+        margin-bottom: 5px;
+    }
+    label, select {
+        display: block;
+    }
+    button {
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <!-- <form action="#"> -->
+        <label for="">Amount</label>
+        <input type="text" name="amount" id="amount">
+        <label for="">From Currency</label>
+        <select name="" id="frocur">
+            <option value="vn">VietNam</option>
+        </select>
+        <label for="">To Currency</label>
+        <select name="" id="tocur">
+            <option value="vn">USD</option>
+        </select>
+    <!-- </form> -->
+    <button onclick="getData()">Convert</button><br>
+    <p id="result"></p>
+    <script>
+        function getData () {
+            var a = document.getElementById("amount").value;
+            var b = parseInt(a);
+            var c = b/23000;
+            document.getElementById("result").innerHTML=
+            "Result = " + c + "VND";
+        }
+    </script>
+</body>
+</html>
