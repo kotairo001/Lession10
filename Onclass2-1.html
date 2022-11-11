@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="amount">Amount</label>
+    <input type="text" name="" id="amount">
+    <select name="from" id="from">
+        <option value="vn">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    <select name="to" id="to">
+        <option value="usd">USD</option>
+        <option value="vn">VND</option>
+    </select>
+    <button onclick="myFunction ()">Convert</button>
+    <script>
+        function myFunction () {
+            let a = parseInt(document.getElementById("amount").value);
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            if (from == "vn" && to == "usd") {
+                alert("Result is " + a/23000 + "USD");
+            }
+            else if (from == "usd" && to == "vn") {
+                alert("Result is " + a*23000 + "VN");
+            }
+            else {
+                alert("Input other number");
+            }
+        }
+    </script>
+
+</body>
+</html>
